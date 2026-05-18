@@ -20,32 +20,11 @@ public class Main {
         }
     }
 
-    /*public static void filterOddNumbers(int[] a) {
-        for (int i = 0; i < a.length; i += 2) {
-            System.out.println(a[i]);
-        }
-    }
-
-    public static void filterEvenNumbers(int[] a) {
-        for (int i = 0; i < a.length; i += 2) {
-            System.out.println(a[i]);
-        }
-    }*/
-
     public static void main(String[] args) {
 
         ArrayList<Integer> numbers = getNumbers();
         numbers.stream().forEach(System.out::println);
-
-
-        System.out.println();
-        EvenNumbers();
-        System.out.println();
-
-
-
-        /*filterOddNumbers(a);
-        filterEvenNumbers(a);*/
+        numbers.stream().filter(number -> number % 2 == 0).forEach(System.out::println);
 
     }
 
