@@ -25,6 +25,7 @@ public class Main {
         ArrayList<Integer> numbers = getNumbers();
         numbers.stream().forEach(System.out::println);
         numbers.stream().filter(number -> number % 2 == 0).forEach(System.out::println);
+        numbers.stream().filter(number -> number % 2 != 0).forEach(System.out::println);
 
     }
 
