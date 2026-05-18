@@ -1,11 +1,36 @@
 package org.example;
 
 public class Main {
+
+    public static void Numbers() {
+    for (int i = 1; i <= 100; i++) {
+        System.out.println(i);
+    }
+}
+
+    public static void EvenNumbers() {
+        for (int i = 2; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+    }
+
+    public static void filterOddNumbers(int[] a) {
+        for (int i = 0; i < a.length; i += 2) {
+            System.out.println(a[i]);
+        }
+    }
+
+    public static void filterEvenNumbers(int[] a) {
+        for (int i = 0; i < a.length; i += 2) {
+            System.out.println(a[i]);
+        }
+    }
+
     public static void main(String[] args) {
 
-        afiseazaNumere();
+        Numbers();
         System.out.println();
-        afiseazaNumerePare();
+        EvenNumbers();
         System.out.println();
 
         int[] a = new int [100];
@@ -15,32 +40,10 @@ public class Main {
             System.out.println(a[i]);
         }
 
-        extrageImpare(a);
-        extragePare(a);
+        filterOddNumbers(a);
+        filterEvenNumbers(a);
 
     }
 
-    public static void afiseazaNumere() {
-        for (int i = 1; i <= 100; i++) {
-            System.out.println(i);
-        }
-    }
 
-    public static void afiseazaNumerePare() {
-        for (int i = 2; i <= 100; i += 2) {
-            System.out.println(i);
-        }
-    }
-
-    public static void extrageImpare(int[] a) {
-        for (int i = 0; i < a.length; i += 2) {
-            System.out.println(a[i]);
-        }
-    }
-
-    public static void extragePare(int[] a) {
-        for (int i = 0; i < a.length; i += 2) {
-            System.out.println(a[i]);
-        }
-    }
 }
